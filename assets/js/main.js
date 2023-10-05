@@ -225,12 +225,12 @@
 })()
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  $(window).load(function() {
+//   $(window).load(function() {
 
-      $('#loadOverlay').fadeOut('slow');
+//       $('#loadOverlay').fadeOut('slow');
 
-  })
+//   })
 
-})
+// })

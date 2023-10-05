@@ -7,8 +7,6 @@
   "use strict";
 
   let forms = document.querySelectorAll('.php-email-form');
-  console.log("entered here")
-
   forms.forEach( function(e) {
     e.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -58,12 +56,14 @@
     })
     .then(response => {
       if( response.ok ) {
+        console.log("entered here")
         return response.text()
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
     .then(data => {
+      console.log("entered here too")
       thisForm.querySelector('.loading').classList.remove('d-block');
       if (data.trim() == 'OK') {
         thisForm.querySelector('.sent-message').classList.add('d-block');
